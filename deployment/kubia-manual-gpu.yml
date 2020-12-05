@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kubia-manual-gpu
+  labels:
+    app: kubia-manual
+spec:
+  nodeSelector:
+    gpu: "true"
+  containers:
+    - name: kubia
+      image: zifter/kubia
+      ports:
+        - containerPort: 8080
+          protocol: TCP

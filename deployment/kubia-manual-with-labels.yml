@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kubia-manual-v2cp
+  labels:
+    app: kubia-manual
+    env: prod
+    creation_method: manual
+spec:
+  containers:
+    - name: kubia
+      image: zifter/kubia
+      ports:
+        - containerPort: 8080
+          protocol: TCP
