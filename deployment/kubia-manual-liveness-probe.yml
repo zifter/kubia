@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kubia-manual
+  labels:
+    app: kubia-manual
+spec:
+  containers:
+    - name: kubia
+      image: zifter/kubia
+      ports:
+        - containerPort: 8080
+          protocol: TCP
+      livenessProbe:
+        httpGet:
+          path: /
+          port: 8080

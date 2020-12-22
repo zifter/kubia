@@ -5,4 +5,4 @@ COPY . .
 
 RUN go install .
 
-CMD ["k8s"]
+CMD ["kubia"]

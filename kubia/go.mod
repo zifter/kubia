@@ -1,3 +1,3 @@
-module k8s
+module kubia
 
 go 1.15

@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: batch-job-parallel
+spec:
+  parallelism: 5
+  template:
+    metadata:
+      name: batch-job-parallel
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: main
+          image: luksa/batch-job
